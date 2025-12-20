@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans Easy | Agri GATE Institute</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* --- CSS STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+        }
+
+        /* Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-transform: uppercase;
+        }
+
+        .logo span { color: #e67e22; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: #e67e22; }
+
+        .btn-login {
+            background: #e67e22;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1523050853063-bd8012fbb761?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+        .cta-btn {
+            padding: 15px 35px;
+            background: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        .cta-btn:hover { transform: scale(1.05); background: #d35400; }
+
+        /* Features Section */
+        .section-padding { padding: 80px 5%; max-width: 1200px; margin: auto; }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .feature-card:hover { transform: translateY(-10px); }
+        .feature-card i { font-size: 3rem; color: #e67e22; margin-bottom: 20px; }
+        .feature-card h3 { margin-bottom: 15px; }
+
+        /* Mobile Menu */
+        .menu-toggle { display: none; cursor: pointer; font-size: 1.5rem; }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">TRANS<span>EASY</span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Test Packages</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="btn-login">Login/Register</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>India's Leading Agri GATE Institute</h1>
+        <p>Your dedicated allies on the path to success since 2015.</p>
+        <a href="#" class="cta-btn">View Packages</a>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-video"></i>
+                <h3>Live Lectures</h3>
+                <p>Interactive sessions with real-time doubt resolution and updated content.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-file-signature"></i>
+                <h3>Live Tests</h3>
+                <p>Gauge your performance in real-time with our nationwide mock test series.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Updated Course</h3>
+                <p>Study materials aligned perfectly with the latest GATE exam patterns.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* --- JAVASCRIPT --- */
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
