@@ -1,0 +1,40 @@
+<div class="bg-white">
+  <div class="container mx-auto px-6 py-12 flex flex-col h-[calc(100vh-150px)]">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-extrabold text-slate-800 sm:text-5xl">Ask Jagat AI</h1>
+      <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+        Your personal AI-powered guide for Agri GATE preparation.
+      </p>
+    </div>
+    
+    <div #chatContainer class="flex-grow bg-gray-50 rounded-lg shadow-inner p-4 overflow-y-auto space-y-4">
+      @for (message of messages(); track $index) {
+        <div class="flex" [class.justify-end]="message.sender === 'user'" [class.justify-start]="message.sender === 'ai'">
+          <div class="max-w-lg px-4 py-2 rounded-xl shadow" [class.bg-orange-500]="message.sender === 'user'" [class.text-white]="message.sender === 'user'" [class.bg-gray-200]="message.sender === 'ai'" [class.text-gray-800]="message.sender === 'ai'">
+            <p [innerHTML]="message.text.replace(/\\n/g, '<br>')"></p>
+          </div>
+        </div>
+      }
+      @if (geminiService.loading()) {
+        <div class="flex justify-start">
+          <div class="max-w-lg px-4 py-2 rounded-xl shadow bg-gray-200 text-gray-800">
+            <div class="flex items-center space-x-2">
+              <div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+              <div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse [animation-delay:0.2s]"></div>
+              <div class="w-2 h-2 bg-gray-500 rounded-full animate-pulse [animation-delay:0.4s]"></div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="mt-4">
+      <div class="flex items-center bg-white border rounded-lg shadow-sm overflow-hidden">
+        <input [formControl]="promptControl" (keyup.enter)="sendMessage()" type="text" placeholder="Ask about syllabus, books, or study plans..." class="flex-grow p-4 border-none focus:ring-0">
+        <button (click)="sendMessage()" [disabled]="promptControl.invalid || geminiService.loading()" class="px-6 py-4 bg-orange-500 text-white font-semibold hover:bg-orange-600 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
