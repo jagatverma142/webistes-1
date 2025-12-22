@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Register | JAGATEDUCATION</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="auth-body">
     
@@ -27,7 +28,7 @@
     </header>
 
     <!-- Back to Home -->
-    <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <center><a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
 
     <div class="auth-container" id="authContainer">
         
@@ -59,10 +60,10 @@
             <form action="#">
                 <h1>Sign in</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                     <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                     <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
                 <span>or use your account</span>
                 <div class="auth-input-group">
                     <input type="email" placeholder="Email" required />
@@ -81,12 +82,12 @@
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
+                    <p>To keep connected with us <br>please login with your personal info</p>
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start your Agri-GATE journey with us</p>
+                    <p>Enter your personal details <br>& <br> start your Agri-GATE journey with us</p>
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
@@ -110,6 +111,6 @@
             const input = document.getElementById(id);
             input.type = input.type === "password" ? "text" : "password";
         }
-    </script>
+    </script></center>
 </body>
 </html>
