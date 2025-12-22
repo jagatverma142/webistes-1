@@ -1,72 +1,10 @@
-/* --- CSS STYLES --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f7f6;
-}
-
-/* Navigation */
-header {
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #2c3e50;
-    text-transform: uppercase;
-}
-
-.logo span { color: #e67e22; }
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-links a:hover { color: #e67e22; }
-
-.btn-login {
-    background: #e67e22;
-    color: #fff !important;
-    padding: 8px 20px;
-    border-radius: 5px;
-}
 
 /* Hero Section */
 .hero {
     height: 70vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1523050853063-bd8012fbb761?auto=format&fit=crop&w=1350&q=80');
+    url('https://images.unsplash.com/photo-1523050853063-bd8012fbb761?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -430,7 +368,6 @@ header {
 
 //contact page/* --- Contact Page Specific Styles --- */
 
-/* --- Advanced Contact Page Styles --- */
 
 .contact-hero {
     background: #2c3e50;
