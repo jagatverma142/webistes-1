@@ -27,7 +27,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
 }
 
@@ -793,5 +793,58 @@ form {
 
 
 
+//footer styles/* --- Footer Styles --- */
+.main-footer {
+    background-color: #1a1a1a; /* Dark professional background */
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footer-logo { font-weight: bold; font-size: 1.5rem; }
+.footer-logo span { color: #f39c12; /* Matching your orange logo */ }
+
+.footer-col h3 {
+    color: #f39c12;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col ul li { margin-bottom: 10px; }
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #f39c12;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+}
 
