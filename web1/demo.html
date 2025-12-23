@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Company Section</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+    
+    <style>
+        /* --- Global Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfd;
+        }
+
+        /* --- About Section Container --- */
+        .about-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center; /* Vertically aligns text and image */
+            gap: 60px; /* Space between the text and the image */
+        }
+
+        /* --- Left Column: Text Styling --- */
+        .about-text {
+            flex: 1; /* Takes up 50% of the space */
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: #1a2b4e; /* Dark blue from the image */
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Divider Styles (matching your previous design) */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .divider .line {
+            width: 35px;
+            height: 3px;
+            background-color: #d1d1d1;
+            border-radius: 2px;
+        }
+
+        .divider .dot {
+            width: 12px;
+            height: 12px;
+            background-color: #77dd77; /* Pastel green from the image */
+            border-radius: 50%;
+        }
+
+        /* Paragraph Styles */
+        .about-text p {
+            margin-bottom: 20px;
+            color: #5a5a5a; /* Dark gray for better readability */
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+        
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- Right Column: Image Styling --- */
+        .about-image {
+            flex: 1; /* Takes up the other 50% of the space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            /* Optional: Adds a subtle shadow to make the illustration pop */
+            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.05));
+        }
+
+        /* --- Responsive Design for Smaller Screens --- */
+        @media (max-width: 992px) {
+            .about-container {
+                flex-direction: column; /* Stack elements vertically */
+                gap: 40px;
+            }
+
+            .about-text, .about-image {
+                flex: auto;
+                width: 100%;
+            }
+            
+            /* Optional: On mobile, you might want the image above the text. 
+               Uncomment the line below to do that. */
+            /* .about-image { order: -1; } */
+
+            .about-text h2 {
+                text-align: center;
+            }
+            
+            .about-text .divider {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="about-section">
+        <div class="about-container">
+            
+            <div class="about-text">
+                <h2>ABOUT COMPANY</h2>
+                <div class="divider">
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                    <span class="line"></span>
+                </div>
+                <p>Welcome to Trans Easy-India's First & Leading Agri GATE institute Since 2015. At Trans Easy, we're your dedicated allies on the path to success. With a passion for education and a commitment to excellence, we stand as a trusted beacon for aspiring engineers seeking to conquer the GATE exam.</p>
+                <p>What sets us apart: Our faculty members With years of experience in their respective fields, provide unparalleled guidance and support to help students excel. We have meticulously designed our curriculum to cover all essential topics and concepts.</p>
+                <p>Our structured approach ensures that students develop a strong foundation and are well-prepared to tackle the exam with confidence. we provide comprehensive study material that is curated by experts and updated regularly to align with the latest exam patterns and trends.</p>
+                <p>Our study material includes textbooks, practice questions, mock tests, and more, ensuring that students have all the resources they need to succeed. We believe in the power of feedback to drive improvement. Through regular assessments and feedback sessions, we track each student's progress and...</p>
+            </div>
+
+            <div class="about-image">
+                <img src="https://static.onlinetestpanel.com/assets/templet/t3/images/aboutus.png" alt="Trans Easy Education Illustration">
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
