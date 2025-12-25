@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAGATEDUCATION | Agri GATE Institute</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="nav.html">
+    <link rel="stylesheet" href="/statics/css/style.css">
+    <link rel="stylesheet" href="/statics/css/nav.css">
 </head>
 <body>
     <!--load navbar from nav.html --->
@@ -47,6 +47,15 @@
         </div>
     </section>
 
+    <div id="about-section"></div>
+    <script>
+        
+        fetch('about.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('about-container-placeholder').innerHTML = data;
+            });
+    </script>
 
 
 
@@ -262,42 +271,42 @@
             
             <!-- Feature 1 -->
             <div class="feature-card">
-                <div class="icon-box"><img src="https://cdn0.iconfinder.com/data/icons/education-59/128/cap_-512.png" alt="Mobile App Icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="icon-box"><img src="/statics/icons8-expert-48.png"><i class="fas fa-chalkboard-teacher"></i></div>
                 <h3>Expert Faculty</h3>
                 <p>Learn from GATE toppers and industry experts with years of teaching experience.</p>
             </div>
 
             <!-- Feature 2 -->
             <div class="feature-card">
-                <div class="icon-box"><img src="https://www.transeasy.org/assets/templet/t3/images/automatic1.png"  alt="Mobile App Icon"></div>
+                <div class="icon-box"><img src="https://www.transeasy.org/assets/templet/t3/images/expertise.png"  alt="Mobile App Icon"></div>
                 <h3>Anytime Access</h3>
                 <p>Study on the go! Our platform works perfectly on mobile, tablet, and desktop.</p>
             </div>
 
             <!-- Feature 3 -->
             <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-file-pdf"></i></div>
+                <div class="icon-box"><img src="/statics/icons8-pdf-48.png" alt="icon-box"><i class="fas fa-file-pdf"></i></div>
                 <h3>Detailed PDF Notes</h3>
                 <p>Get comprehensive, topic-wise study materials and hand-written notes.</p>
             </div>
 
             <!-- Feature 4 -->
             <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-question-circle"></i></div>
+                <div class="icon-box"><img src="/statics/icons8-online-support-48.png" alt="icon-box"><i class="fas fa-question-circle"></i></div>
                 <h3>24/7 Doubt Support</h3>
                 <p>Stuck on a question? Get your doubts resolved quickly by our dedicated mentors.</p>
             </div>
 
             <!-- Feature 5 -->
             <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                <div class="icon-box"><img src="/statics/icons8-electronic-brain-50.png" alt="icon-box"><i class="fas fa-chart-line"></i></div>
                 <h3>AI Performance Analytics</h3>
                 <p>Track your progress with detailed reports and identify your weak areas instantly.</p>
             </div>
 
             <!-- Feature 6 -->
             <div class="feature-card">
-                <div class="icon-box"><i class="fas fa-history"></i></div>
+                <div class="icon-box"><img src="/statics/icons8-test-results-50.png" alt="icon-box"><i class="fas fa-history"></i></div>
                 <h3>Previous Year Papers</h3>
                 <p>Access 15+ years of solved GATE Agricultural Engineering question papers.</p>
             </div>
