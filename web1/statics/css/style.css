@@ -470,18 +470,14 @@
 //features page/* --- Features Page Specific Styles --- */
 /* --- Features Page Specific Styles --- */
 
-.features-hero {
-    background: linear-gradient(rgba(230, 126, 34, 0.8), rgba(230, 126, 34, 0.8)), 
-                url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1350&q=80');
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+
+
+.features-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 /* Enhancing the Feature Cards */
