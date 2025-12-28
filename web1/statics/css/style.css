@@ -1,3 +1,6 @@
+*
+
+
 /* Hero Section */
 .hero {
     height: 70vh;
@@ -21,14 +24,20 @@
     padding: 15px 35px;
     background: #e67e22;
     color: white;
+    margin-left: 12px;
+    margin-top: 20px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    
 }
+ 
 
 .cta-btn:hover { transform: scale(1.05); background: #d35400; }
+
+
 
 /* Features Section */
 .section-padding { padding: 80px 5%; max-width: 1200px; margin: auto; }
